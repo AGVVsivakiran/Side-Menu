@@ -1,5 +1,84 @@
-.imglogo{
+
+/* https://www.youtube.com/watch?v=aWGlFgMQW3U&list=PLpwngcHZlPafcrmbvCsXig3tiUpIa-DVo */
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --color-text-primary: #1f2936;
+    --color-text-placeholder:#798eae;
+    --color-bg-primary:#f9fafb;
+    --color-bg-secondary:#ececfd;
+    --color-bg-sidebar: #fff;
+    --color-border-hr: #e2e8f0;
+    --color-hover-primary:#695cfe;
+    --color-hover-secondary: #e2e2fb;
+    --color-shadow:rgba(0,0,0,0.05);
+}
+.header-logo{
     width:40px;
     height:40px;
     border-radius: 10px;
+}
+
+body{
+    background:var(--color-bg-primary);
+}
+
+.sidebar{
+    position: sticky;
+    top:0;
+    height:100vh;
+    width:270px;
+    background:var(--color-bg-sidebar);
+    border-right:1px solid var(--color-border-hr);
+    box-shadow:0 3px 9px var(--color-shadow);
+}
+
+.sidebar .sidebar-header{
+    display: flex;
+    padding: 20px 18px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border-hr);
+}
+
+.sidebar-header .header-logo{
+    width:46x;
+    height:46px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.sidebar-header .sidebar-toggle{
+    height:40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+}
+
+.sidebar-header .sidebar-toggle:hover{
+    background: var(--color-bg-secondary);
+}
+
+.sidebar-header .sidebar-toggle span{
+    font-size: 1.75rem;
+}
+
+.sidebar .sidebar-content{
+    padding: 20px 18px;
+    overflow: hidden auto;
+    scrollbar-width: thin;
+    scrollbar-color:var(--color-text-placeholder) transparent;
 }
