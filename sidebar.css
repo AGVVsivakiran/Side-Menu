@@ -143,8 +143,13 @@ body {
     transition: 0.4s cubic-bezier(0, 0.8, 1, -0.18) ease-in-out;
 
     &:focus-within {
-        background: var(--color-hover-secondary)
+        background: var(--color-hover-secondary);
     }
+}
+
+.sidebar.collapsed .sidebar-content .search-form:hover{
+cursor: pointer;
+background: var(--color-hover-secondary);
 }
 
 .search-form input {
