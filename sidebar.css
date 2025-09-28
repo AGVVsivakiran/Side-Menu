@@ -84,6 +84,7 @@ body {
     pointer-events: none;
 }
 
+.site-nav .sidebar-toggle,
 .sidebar-header .sidebar-toggle {
     height: 40px;
     width: 40px;
@@ -106,6 +107,7 @@ body {
     transform: translateX(-2px);
 }
 
+.site-nav .sidebar-toggle:hover,
 .sidebar-header .sidebar-toggle:hover {
     background: var(--color-bg-secondary);
 }
@@ -279,3 +281,78 @@ body.dark-theme .theme-toggle .theme-toggle-track{
 body.dark-theme .theme-toggle-track .theme-toggle-indicator{
     transform: translateX(24px);
 }
+
+.site-nav{
+    display: none;
+    position:sticky;
+    top:0;
+    padding: 15px 20px;
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-border-hr);
+    .sidebar-toggle{
+        position:unset;
+    }
+}
+
+.container{
+    display: flex;
+}
+.container .main-content{
+    flex:1;
+    padding: 20px;
+     h1 {
+        font-size: 2.5rem;
+        color: var(--color-text-primary);
+        margin-bottom: 20px;
+    }
+
+     .card {
+        font-size: 1rem!important;
+        color: var(--color-text-placeholder)!important;
+        line-height: 1.6!important;
+        margin-bottom: 15px!important;
+        overflow: hidden; /* Ensure text doesn't overflow */
+        text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+        flex-wrap: wrap;
+        word-break: break-all;
+        background-color: var(--color-bg-secondary)!important;
+        padding: 15px!important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body::before{
+            content: "";
+            position: fixed;
+            inset:0;
+            z-index: 10;
+            opacity: 0;
+            pointer-events:none;
+            background: rgba(0,0,0,0.6);
+            transition: .4s ease;
+        }
+
+        body:has(.sidebar:not(.collapsed))::before {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .site-nav{
+        display: block;
+        }
+
+        .sidebar{
+        position: fixed;
+        left:0;
+        width:270px;
+        height: 100%;
+        z-index: 20;
+        transition: left .4s ease;
+        }
+
+    .sidebar.sidebar.collapsed{
+        left: -270px;
+        width: 270px;
+    }
+}
+

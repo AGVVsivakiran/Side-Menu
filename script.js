@@ -16,7 +16,7 @@ menuLinks.forEach(link => {
 
 // sidebar collapse
 const sidebar = document.querySelector(".sidebar");
-const sidebarToggleBtn = document.querySelector(".sidebar-toggle");
+const sidebarToggleBtn = document.querySelectorAll(".sidebar-toggle");
 const themeToggleBtn = document.querySelector(".theme-toggle");
 const themeIcon = themeToggleBtn.querySelector(".theme-icon");
 const searchForm = document.querySelector(".search-form");
@@ -32,9 +32,11 @@ const shouldUseDarkTheme = savedTheme === "dark" || (!savedTheme && systemPrefer
 document.body.classList.toggle("dark-theme", shouldUseDarkTheme);
 updateThemeIcon();
 
-sidebarToggleBtn.addEventListener("click", () => {
+sidebarToggleBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");
     updateThemeIcon();
+  })
 });
 
 searchForm.addEventListener("click", () => {
@@ -49,3 +51,6 @@ themeToggleBtn.addEventListener("click", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
   updateThemeIcon();
 });
+
+if (window.innerWidth > 768) 
+  sidebar.classList.add("collapsed");

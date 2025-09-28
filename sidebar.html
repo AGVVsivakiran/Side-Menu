@@ -10,78 +10,90 @@
     <link rel="stylesheet" href="sidebar.css">
 </head>
 
-<body class="dark-theme">
-    <aside class="sidebar">
-        <!-- sidebar header -->
-        <header class="sidebar-header">
-            <img src="logoimg.png" alt="SideBar" class="header-logo">
-            <button class="sidebar-toggle">
-                <span class="material-symbols-rounded">chevron_left</span>
-            </button>
-        </header>
-        <div class="sidebar-content">
-            <form action="" class="search-form">
-                <span class="material-symbols-rounded">search</span>
-                <input type="search" placeholder="search..." required>
-            </form>
-            <ul class="menu-list">
-                <li class="menu-item">
-                    <a href="" class="menu-link active">
-                        <span class="material-symbols-rounded">Dashboard</span>
-                        <span class="menu-label">Dashboard</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link ">
-                        <span class="material-symbols-rounded">insert_chart</span>
-                        <span class="menu-label">Analytics</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link">
-                        <span class="material-symbols-rounded">notifications</span>
-                        <span class="menu-label">Notifications</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link">
-                        <span class="material-symbols-rounded">star</span>
-                        <span class="menu-label">Favourites</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link">
-                        <span class="material-symbols-rounded">storefront</span>
-                        <span class="menu-label">Products</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link">
-                        <span class="material-symbols-rounded">group</span>
-                        <span class="menu-label">Customers</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link">
-                        <span class="material-symbols-rounded">settings</span>
-                        <span class="menu-label">Settings</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sidebar-footer">
-            <button class="theme-toggle">
-                <div class="theme-label">
-                    <span class="theme-icon material-symbols-rounded">dark_mode</span>
-                    <span class="theme-text">Dark Mode</span>
-                </div>
-                <div class="theme-toggle-track">
-                    <div class="theme-toggle-indicator"></div>
-                </div>
-            </button>
-        </div>
-    </aside>
+<body>
+    <!-- site navbar -->
+     <nav class="site-nav">
+        <button class="sidebar-toggle">
+            <span class="material-symbols-rounded">menu</span>
+     </nav>
+     <div class="container">
+         <aside class="sidebar collapsed">
+             <!-- sidebar header -->
+             <header class="sidebar-header">
+                 <img src="logoimg.png" alt="SideBar" class="header-logo">
+                 <button class="sidebar-toggle">
+                     <span class="material-symbols-rounded">chevron_left</span>
+                 </button>
+             </header>
+             <div class="sidebar-content">
+                 <form action="" class="search-form">
+                     <span class="material-symbols-rounded">search</span>
+                     <input type="search" placeholder="search..." required>
+                 </form>
+                 <ul class="menu-list">
+                     <li class="menu-item">
+                         <a href="" class="menu-link active">
+                             <span class="material-symbols-rounded">Dashboard</span>
+                             <span class="menu-label">Dashboard</span>
+                         </a>
+                     </li>
+                     <li class="menu-item">
+                         <a href="" class="menu-link ">
+                             <span class="material-symbols-rounded">insert_chart</span>
+                             <span class="menu-label">Analytics</span>
+                         </a>
+                     </li>
+                     <li class="menu-item">
+                         <a href="" class="menu-link">
+                             <span class="material-symbols-rounded">notifications</span>
+                             <span class="menu-label">Notifications</span>
+                         </a>
+                     </li>
+                     <li class="menu-item">
+                         <a href="" class="menu-link">
+                             <span class="material-symbols-rounded">star</span>
+                             <span class="menu-label">Favourites</span>
+                         </a>
+                     </li>
+                     <li class="menu-item">
+                         <a href="" class="menu-link">
+                             <span class="material-symbols-rounded">storefront</span>
+                             <span class="menu-label">Products</span>
+                         </a>
+                     </li>
+                     <li class="menu-item">
+                         <a href="" class="menu-link">
+                             <span class="material-symbols-rounded">group</span>
+                             <span class="menu-label">Customers</span>
+                         </a>
+                     </li>
+                     <li class="menu-item">
+                         <a href="" class="menu-link">
+                             <span class="material-symbols-rounded">settings</span>
+                             <span class="menu-label">Settings</span>
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+     
+             <div class="sidebar-footer">
+                 <button class="theme-toggle">
+                     <div class="theme-label">
+                         <span class="theme-icon material-symbols-rounded">dark_mode</span>
+                         <span class="theme-text">Dark Mode</span>
+                     </div>
+                     <div class="theme-toggle-track">
+                         <div class="theme-toggle-indicator"></div>
+                     </div>
+                 </button>
+             </div>
+         </aside>
+         <div class="main-content">
+            <h1 class="page-title">Dashboard </h1>
+            <p class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam cupiditate ullam maiores nostrum quaerat porro, iste numquam iusto aliquid esse officia similique, ex sapiente culpa fuga quisquam rerum quas, atque sint illum assumenda recusandae doloremque? Rerum repellat quibusdam exercitationem provident?</p>
+         </div>
+        
+     </div>
 </body>
 <script src="./script.js"></script>
 
