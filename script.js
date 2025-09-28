@@ -17,7 +17,12 @@ menuLinks.forEach(link => {
 // sidebar collapse
 const sidebar = document.querySelector(".sidebar");
 const sidebarToggleBtn = document.querySelector(".sidebar-toggle");
+const themeToggleBtn = document.querySelector(".theme-toggle");
 
 sidebarToggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");
 });
+
+themeToggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+})

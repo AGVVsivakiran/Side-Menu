@@ -22,6 +22,18 @@
     --color-shadow: rgba(0, 0, 0, 0.05);
 }
 
+body.dark-theme{
+    --color-text-primary: #f1f5f9;
+    --color-text-placeholder: #798eae;
+    --color-bg-primary: #111827;
+    --color-bg-secondary: #202031;
+    --color-bg-sidebar: #1f2937;
+    --color-border-hr: #3b475c;
+    --color-hover-primary: #695cfe;
+    --color-hover-secondary: #48566a;
+    --color-shadow: rgba(0, 0, 0, 0.3); 
+}
+
 .header-logo {
     width: 40px;
     height: 40px;
@@ -115,6 +127,10 @@ body {
     scrollbar-color: var(--color-text-placeholder) transparent;
 }
 
+.sidebar.collapsed .sidebar-content{
+    scrollbar-width: none;
+}
+
 .sidebar-content .search-form {
     min-height: 48px;
     border-radius: 8px;
@@ -186,6 +202,7 @@ body {
     padding: 20px 18px;
     white-space: nowrap;
     border-top: 1px solid var(--color-border-hr);
+    overflow: hidden;
 }
 
 .sidebar-footer .theme-toggle {
@@ -230,7 +247,12 @@ body {
     border-radius: 999px;
     margin-left: auto;
     background: #c3d1ec;
-    transition: opacity .4s .2s ease, background-color 0.3s ease;
+    transition: opacity .4s .2s ease, 
+    background-color 0.3s ease;
+}
+
+body.dark-theme .theme-toggle .theme-toggle-track{
+    background: #695cfe;
 }
 
 .theme-toggle-track .theme-toggle-indicator {
@@ -242,4 +264,13 @@ body {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar.collapsed .theme-toggle-track .theme-toggle-indicator {
+    opacity: 0;
+}
+
+body.dark-theme .theme-toggle-track .theme-toggle-indicator{
+    transform: translateX(24px);
 }
